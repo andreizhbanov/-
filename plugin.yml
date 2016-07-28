@@ -1,4 +1,4 @@
-name: Broadcaster
+name: Broadcaster_ru
 main: Broadcaster\Main
 version: "1.16"
 api: [1.12.0]
