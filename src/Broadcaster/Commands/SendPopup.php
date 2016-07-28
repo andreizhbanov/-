@@ -56,14 +56,14 @@ class SendPopup extends PluginBase implements CommandExecutor{
     									$this->plugin->getServer()->getScheduler()->scheduleRepeatingTask(new PopupDurationTask($this->plugin, $this->plugin->popupbyPlayer($sender, $this->temp, $this->plugin->getMessagefromArray($args)), $receiver, $this->temp["popup-duration"]), 10);
     								}
     							}else{
-    								$sender->sendMessage($this->plugin->translateColors("&", Main::PREFIX . "&cPlayer not found"));
+    								$sender->sendMessage($this->plugin->translateColors("&", Main::PREFIX . "&cИгрок не найден"));
     							}
     						}
     					}else{
-    						$sender->sendMessage($this->plugin->translateColors("&", Main::PREFIX . "&cUsage: /sp <player> <message>"));
+    						$sender->sendMessage($this->plugin->translateColors("&", Main::PREFIX . "&cUsage: /sp <игрок> <сообщение>"));
     					}
     				}else{
-    					$sender->sendMessage($this->plugin->translateColors("&", "&cYou don't have permissions to use this command"));
+    					$sender->sendMessage($this->plugin->translateColors("&", "&cУ вас нет разрешения на использование этой команды"));
     					return true;
     				}
 				break;
