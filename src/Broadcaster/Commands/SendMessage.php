@@ -59,14 +59,14 @@ class SendMessage extends PluginBase implements CommandExecutor{
     									$receiver->sendMessage($this->plugin->translateColors("&", $this->plugin->messagebyPlayer($sender, $this->temp, $this->plugin->getMessagefromArray($args))));
     								}
     							}else{
-    								$sender->sendMessage($this->plugin->translateColors("&", Main::PREFIX . "&cPlayer not found"));
+    								$sender->sendMessage($this->plugin->translateColors("&", Main::PREFIX . "&cИгрок не найден"));
     							}
     						}
     					}else{
-    						$sender->sendMessage($this->plugin->translateColors("&", Main::PREFIX . "&cUsage: /sm <player> <message>"));
+    						$sender->sendMessage($this->plugin->translateColors("&", Main::PREFIX . "&cUsage: /sm <игрок> <сообщение>"));
     					}
     				}else{
-    					$sender->sendMessage($this->plugin->translateColors("&", "&cYou don't have permissions to use this command"));
+    					$sender->sendMessage($this->plugin->translateColors("&", "&cУ вас нет разрешения на использование этой команды "));
     					return true;
     				}
 				break;
