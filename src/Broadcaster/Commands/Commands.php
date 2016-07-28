@@ -58,12 +58,12 @@ class Commands extends PluginBase implements CommandExecutor{
     			   		}
     			   		elseif($args[0]=="info"){
     			   			if($sender->hasPermission("broadcaster.info")) {
-    			   				$sender->sendMessage($this->plugin->translateColors("&", Main::PREFIX . "&2BroadCaster &9v" . Main::VERSION . " &2developed by&9 " . Main::PRODUCER));
+    			   				$sender->sendMessage($this->plugin->translateColors("&", Main::PREFIX . "&2ИНФО &9v" . Main::VERSION . " &2developed by&9 " . Main::PRODUCER));
     			   				$sender->sendMessage($this->plugin->translateColors("&", Main::PREFIX . "&2Website &9" . Main::MAIN_WEBSITE));
     			   				return true;
     			   			}
     			   			else{
-    			   				$sender->sendMessage($this->plugin->translateColors("&", "&cYou don't have permissions to use this command"));
+    			   				$sender->sendMessage($this->plugin->translateColors("&", "&cУ вас нет прав на использование этой команды"));
     			   				return true;
     			   			}
     			   		}else{
@@ -72,7 +72,7 @@ class Commands extends PluginBase implements CommandExecutor{
     			   				break;
     			   			}
     			   			else{
-    			   				$sender->sendMessage($this->plugin->translateColors("&", "&cYou don't have permissions to use this command"));
+    			   				$sender->sendMessage($this->plugin->translateColors("&", "&cУ вас нет прав на использование этой команды"));
     			   				break;
     			   			}
     			   			return true;
@@ -80,14 +80,14 @@ class Commands extends PluginBase implements CommandExecutor{
     			   	}
     			   	else{
     			   		if($sender->hasPermission("broadcaster")){
-    			   			$sender->sendMessage($this->plugin->translateColors("&", "&2- &9Available Commands &2-"));
-    			   			$sender->sendMessage($this->plugin->translateColors("&", "&9/bc info &2- &9Show info about this plugin"));
-    			   			$sender->sendMessage($this->plugin->translateColors("&", "&9/bc reload &2- &9Reload the config"));
-    			   			$sender->sendMessage($this->plugin->translateColors("&", "&9/sendmessage &2- &9Send message to the specified player (* for all players)"));
-    			   			$sender->sendMessage($this->plugin->translateColors("&", "&9/sendpopup &2- &9Send popup to the specified player (* for all players)"));
+    			   			$sender->sendMessage($this->plugin->translateColors("&", "&2- &9Команды &2-"));
+    			   			$sender->sendMessage($this->plugin->translateColors("&", "&9/bc info &2- &9Показать инфу о плагине"));
+    			   			$sender->sendMessage($this->plugin->translateColors("&", "&9/bc reload &2- &9Обновить конфигурацию"));
+    			   			$sender->sendMessage($this->plugin->translateColors("&", "&9/sendmessage &2- &9Отправить сообщение для указанного игрока (* для всех игроков)"));
+    			   			$sender->sendMessage($this->plugin->translateColors("&", "&9/sendpopup &2- &9Отправить всплывающее окно для указанного игрока (* для всех игроков)"));
     			   			break;
     			   		}else{
-    			   			$sender->sendMessage($this->plugin->translateColors("&", "&cYou don't have permissions to use this command"));
+    			   			$sender->sendMessage($this->plugin->translateColors("&", "&cУ вас нет разрешения на использование этой команды"));
     			   			break;
     			   			}
     			   		return true;
